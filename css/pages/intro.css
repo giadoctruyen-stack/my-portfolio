@@ -249,6 +249,8 @@
   font-size: var(--text-lg);
   color: var(--text-secondary);
   line-height: var(--leading-relaxed);
+  text-align: justify;
+  max-width: 100%;
 }
 
 /* Info list */

@@ -176,9 +176,9 @@ export function renderSummaryPage() {
         </div>
 
         <div class="card reveal" style="margin-bottom: var(--space-8); background: var(--bg-surface);">
-          <h3 style="margin-bottom: var(--space-3); color: var(--text-heading); font-size: var(--text-xl);">Nhận thức về Liêm chính</h3>
-          <p style="line-height: var(--leading-relaxed); color: var(--text-secondary); text-align: justify;">
-            Khắc sâu ranh giới đạo đức giữa "hỗ trợ hợp lý" và "gian lận học thuật". Kiên quyết nói không với "viết hộ kỹ thuật số" để tránh hội chứng "lười tư duy thứ cấp" gây thui chột năng lực máy tính (computational thinking) của người kỹ sư.
+          <h3 style="margin-bottom: var(--space-3); color: var(--text-heading); font-size: var(--text-xl);">Nhận thức về Liêm chính học thuật</h3>
+          <p style="line-height: var(--leading-relaxed); color: var(--text-secondary); text-align: justify; max-width: 100%;">
+            Đối với một sinh viên ngành Công nghệ Thông tin tại UET, bảo vệ tính Liêm chính học thuật là nguyên tắc đạo đức cốt lõi giúp định hình tác phong của một kỹ sư chân chính trong kỷ nguyên số. Em nhận thức sâu sắc ranh giới nghiêm ngặt giữa việc khai thác AI làm một "đối tác tư duy" hợp lý để giải thích nguyên lý hay hỗ trợ debug thuật toán, với hành vi gian lận dưới hình thức "viết hộ kỹ thuật số". Bằng cách kiên quyết nói không với copy-paste thụ động, luôn chủ động kiểm chứng chéo dữ liệu từ máy với giáo trình gốc và lồng ghép lăng kính phản biện cá nhân, em cam kết loại bỏ triệt để hội chứng "lười tư duy thứ cấp" để bảo vệ năng lực tư duy máy tính độc lập và giá trị thực học của bản thân.
           </p>
         </div>
 

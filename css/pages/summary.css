@@ -55,6 +55,8 @@
   font-size: var(--text-sm);
   color: var(--text-secondary);
   line-height: var(--leading-relaxed);
+  text-align: justify;
+  max-width: 100%;
 }
 
 .lessons-list {
@@ -266,6 +268,8 @@
   font-size: var(--text-sm);
   line-height: var(--leading-relaxed);
   color: var(--text-secondary);
+  text-align: justify;
+  max-width: 100%;
 }
 
 .quote-callout {
