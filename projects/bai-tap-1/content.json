@@ -1,0 +1,66 @@
+{
+  "id": 1,
+  "title": "Thao tác với tệp tin và thư mục",
+  "subtitle": "Bài tập 1 - Mục 3.4",
+  "icon": "📁",
+  "description": "Thực hành các kỹ năng cơ bản về quản lý tệp tin: tạo, đổi tên, sao chép, di chuyển, xóa và khôi phục tệp tin trên Windows.",
+  "tags": [
+    "File System",
+    "Windows",
+    "Organization"
+  ],
+  "status": "done",
+  "displayMode": "parsed",
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "1. Tư duy Tổ chức & Sơ đồ Cấu trúc Thư mục Tối ưu"
+    },
+    {
+      "type": "text",
+      "content": "Để quản lý dữ liệu học tập và dự án một cách khoa học trên hệ điều hành Windows, em đã thiết lập hệ thống lưu trữ phân cấp tại phân vùng ổ đĩa New Volume (F:) nhằm tách biệt hoàn toàn với ổ đĩa hệ thống C:. Cấu trúc cây thư mục được tổ chức theo sơ đồ logic dưới đây:"
+    },
+    {
+      "type": "code",
+      "content": "New Volume (F:)\n└── ThucHanh_DaoVanHoangGia\n    ├── GhiChuQuanTrong.txt (Tệp gốc sau khi khôi phục từ Recycle Bin)\n    └── TaiLieu\n        ├── GhiChuQuanTrong.txt (Bản sao chép - Copy & Paste)\n        └── DiChuyen.txt (Tệp di chuyển - Cut & Paste)"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "2. Quy tắc Đặt tên Tệp (Naming Convention) & Quản lý Vòng đời Dữ liệu"
+    },
+    {
+      "type": "text",
+      "content": "Nhằm tối ưu hóa khả năng tìm kiếm nâng cao và đảm bảo tính nhất quán khoa học, em áp dụng các nguyên tắc đặt tên và quản lý tệp tin cụ thể sau:"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Quy tắc đặt tên (CamelCase kết hợp Snake_case):"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Thư mục gốc</strong> được đặt theo cú pháp <code>ThucHanh_[HọTênViếtLiềnKhôngDấu]</code> (<code>ThucHanh_DaoVanHoangGia</code>) giúp định danh rõ ràng quyền sở hữu tệp tin.",
+        "<strong>Các tệp tin thành phần</strong> sử dụng quy tắc viết hoa chữ cái đầu và viết liền (<code>GhiChuQuanTrong.txt</code>, <code>DiChuyen.txt</code>, <code>TaiLieu</code>). Cách đặt tên này giúp hệ thống tệp tin không bị lỗi font khi đồng bộ lên các môi trường số hoặc các nền tảng đám mây như Google Drive."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Tư duy Quản lý Vòng đời & Phân cấp Dữ liệu:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Phân cấp dữ liệu</strong>: Sử dụng thao tác Sao chép (Copy & Paste) để nhân bản tệp <code>GhiChuQuanTrong.txt</code> vào thư mục con <code>TaiLieu</code>, giúp phân loại tài liệu theo đúng phân hệ mục đích sử dụng.",
+        "<strong>Tối ưu dung lượng & Bảo mật</strong>: Sử dụng thao tác Di chuyển (Cut & Paste) đối với các tệp tin động như <code>DiChuyen.txt</code> để tránh nhân bản thừa dữ liệu trên ổ đĩa.",
+        "<strong>An toàn dữ liệu</strong>: Phân biệt rõ ràng giữa việc Xóa tạm thời (Delete đưa tệp vào Recycle Bin để có thể khôi phục lại khi cần) và Xóa vĩnh viễn (Shift + Delete đối với các tệp rác, tệp tạm nhằm giải phóng bộ nhớ hệ thống ngay lập tức)."
+      ]
+    }
+  ],
+  "driveLink": "https://drive.google.com/file/d/1vZv3JYmDSw4LuVAJjH4pxs2pH4Sje-Kj/view?usp=drive_link"
+}

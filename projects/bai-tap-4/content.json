@@ -1,0 +1,182 @@
+{
+  "id": 4,
+  "title": "Công cụ hợp tác trực tuyến",
+  "subtitle": "Bài tập 4 - Mục 4.1",
+  "icon": "👥",
+  "description": "Báo cáo thực hành: Tối ưu hóa quy trình điều phối công việc, quản trị tài nguyên và đồng bộ không gian cộng tác số từ xa.",
+  "tags": [
+    "Collaboration",
+    "Trello",
+    "Google Workspace",
+    "Teamwork"
+  ],
+  "status": "done",
+  "displayMode": "parsed",
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm"
+    },
+    {
+      "type": "text",
+      "content": "Báo cáo thực hành: Tối ưu hóa quy trình điều phối công việc, quản trị tài nguyên và đồng bộ không gian cộng tác số từ xa.<br><br><em>Môn học: Nhập môn CNS-AI | Họ tên: Đào Văn Hoàng Gia - MSSV: 25020134</em>"
+    },
+    {
+      "type": "text",
+      "content": "<strong>Báo cáo cá nhân</strong>: Kỹ năng cộng tác trực tuyến<br><strong>Bối cảnh dự án</strong>: Xây dựng dự án tiểu luận về chủ đề \"Kỹ năng làm việc nhóm\".<br><strong>Vai trò cá nhân</strong>: Trưởng nhóm điều phối tiến độ, chịu trách nhiệm thiết lập hạ tầng kỹ thuật và kiểm soát luồng vận hành trên các nền tảng số."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "I. Mục tiêu thiết lập"
+    },
+    {
+      "type": "text",
+      "content": "Khai thác sâu và tích hợp toàn diện các tính năng nâng cao của hệ thống công cụ trực tuyến (Trello, Google Workspace, Zalo). Thiết lập quy trình làm việc minh bạch, tối ưu hóa năng suất cộng tác từ xa và giải quyết triệt để các rủi ro về nhiễu thông tin hay xung đột dữ liệu nhóm."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "II. Hệ thống công cụ và Quy trình phối hợp nâng cao"
+    },
+    {
+      "type": "text",
+      "content": "Em đã chủ động cấu hình phối hợp đồng bộ giữa 4 công cụ chuyên dụng để tạo nên một hệ sinh thái làm việc trực tuyến khép kín:"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "1. Quản lý và Điều phối tiến độ qua Trello"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Phân rã tác vụ bằng Checklist</strong>: Chia nhỏ các hạng mục công việc phức tạp thành các bước hành động cụ thể để các thành viên dễ dàng tự chủ thực hiện. Ví dụ: Thẻ \"Tìm tài liệu\" được cấu trúc chi tiết qua checklist gồm 3 giai đoạn: 1. Tìm tài liệu sơ bộ, 2. Lập dàn ý chi tiết, và 3. Gửi nhóm duyệt.",
+        "<strong>Hệ thống hóa bằng Nhãn màu (Labels)</strong>: Ứng dụng hệ thống nhãn màu trực quan để phân loại độ ưu tiên của công việc (ví dụ: gán Nhãn màu Đỏ cho các nhiệm vụ khẩn cấp, cần xử lý gấp).",
+        "<strong>Tần suất tương tác</strong>: Nhật ký hệ thống ghi nhận tần suất truy cập, kiểm tra và cập nhật trạng thái tiến độ liên tục của em đạt trên 3 lần/tuần."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "assets/77328294-8f22-404c-a1fc-78cda274892c.jfif",
+      "caption": "Hình 1.1: Không gian quản trị tiến độ dự án trên Trello với hệ thống nhãn phân cấp ưu tiên"
+    },
+    {
+      "type": "image",
+      "src": "assets/09220e09-a22b-40fb-b90e-aceffd3da2aa.jfif",
+      "caption": "Hình 1.2: Nhật ký hoạt động minh chứng tần suất cập nhật tiến độ thường xuyên của Gia"
+    },
+    {
+      "type": "image",
+      "src": "assets/6416ef1a-4fba-472e-9443-ae8eeab9854e.jfif",
+      "caption": "Hình 1.3: Quy trình phân rã hạng mục công việc thông qua tính năng Trello Checklist"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "2. Biên tập nội dung minh bạch qua Google Docs"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Chế độ Đề xuất (Suggesting)</strong>: Thay vì can thiệp chỉnh sửa trực tiếp làm thay đổi văn bản gốc, em yêu cầu toàn đội áp dụng chế độ Đề xuất. Điều này giúp các thành viên dễ dàng theo dõi, phản hồi, thảo luận chéo và thống nhất các chỉnh sửa một cách minh bạch.",
+        "<strong>Lịch sử phiên bản (Version History)</strong>: Khai thác tính năng Version History để kiểm soát và ghi lại chính xác, rõ ràng tiến trình đóng góp nội dung thực tế theo thời gian của từng cá nhân vào văn bản chung."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "assets/07494c28-759a-4bee-bc18-e0b10d33fcda.jfif",
+      "caption": "Hình 2: Tính năng Lịch sử phiên bản quản lý và ghi nhận khối lượng đóng góp của Gia"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "3. Quản trị kho lưu trữ số đa cấp qua Google Drive"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Cấu trúc thư mục logic</strong>: Thiết lập một kho lưu trữ tập trung được đặt tên theo mã số sinh viên định danh <code>25020134-Dự án nhóm</code>. Thư mục gốc được phân tách khoa học thành các thư mục con đa cấp tuân thủ 100% quy chuẩn đặt tên: <code>01_Tài liệu tham khảo</code>, <code>02_Bản thảo nội dung</code> (Chứa các tệp quản lý phiên bản: Bản thảo 1.docx, Bản thảo 2.docx), <code>03_Hình ảnh & Slide</code>, <code>04_Báo cáo cuối cùng</code>.",
+        "<strong>Phân quyền truy cập chính xác</strong>: Quản lý quyền chia sẻ chặt chẽ, thiết lập chính xác vai trò cho từng thành viên (Người xem - View / Người chỉnh sửa - Edit) dựa trên chức năng nhiệm vụ để bảo mật tài nguyên."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "assets/8f4b2167-e422-42fa-ad4e-84fb09a75654.jfif",
+      "caption": "Hình 3.1: Hệ thống thư mục lưu trữ đa cấp logic được đặt tên theo định danh sinh viên"
+    },
+    {
+      "type": "image",
+      "src": "assets/7db77ddb-b9cd-48d9-a15c-9b836a1d3c9f.jfif",
+      "caption": "Hình 3.2: Hộp thoại phân quyền chia sẻ tài sản số cho các thành viên nhóm trên Google Drive"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "4. Thảo luận và Điều phối trực tiếp qua Zalo"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Tương tác chủ động</strong>: Duy trì năng lượng tích cực trên kênh chat với tần suất cao (trên 10 lượt tương tác/tuần) để đôn đốc deadline, trả lời đề xuất, ghim thông báo quan trọng và hỗ trợ kỹ thuật kịp thời cho đồng đội.",
+        "<strong>Minh chứng điều phối</strong>: Giao tiếp trực tiếp bằng các câu lệnh rõ ràng để định hướng luồng làm việc (ví dụ: Phản hồi duyệt bài cho thành viên Srt trên Google Docs; tag tên điều phối và nhắc nhở thành viên Hoàng Dũng bám sát Checklist màu Đỏ trên Trello để kịp deadline)."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "assets/10e46766-0c1b-4c68-8bbe-884df4391348.jfif",
+      "caption": "Hình 4: Kênh giao tiếp Zalo đóng vai trò trung tâm điều phối và tương tác trực tiếp"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "III. Phân tích Thách thức & Giải pháp tối ưu quy trình"
+    },
+    {
+      "type": "text",
+      "content": "Xuyên suốt dự án, em đã nhận diện 3 thách thức lớn ảnh hưởng đến hiệu suất và đề xuất các giải pháp kỹ thuật tối ưu mang tính hệ thống:"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Thách thức 1: Sự chậm trễ trong việc cập nhật tiến độ thời gian thực (Real-time update)"
+    },
+    {
+      "type": "text",
+      "content": "<strong>Phân tích</strong>: Lịch trình cá nhân của các thành viên lệch nhau dẫn đến việc cập nhật trạng thái thẻ trên Trello bị trễ, tạo ra các \"điểm mù\" điều phối và gây trì trệ hệ thống.<br><strong>Giải pháp</strong>: Ban hành quy định nghiêm túc \"Cập nhật tức thì\" ngay khi hoàn thành task. Tối ưu hóa bằng hệ thống Nhãn màu để bao quát nhanh các việc khẩn cấp mà không cần mở từng thẻ, kết hợp đôn đốc trực tiếp bằng tính năng @mention thành viên."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Thách thức 2: Rủi ro ghi đè hoặc làm mất dữ liệu khi cộng tác đông người"
+    },
+    {
+      "type": "text",
+      "content": "<strong>Phân tích</strong>: Khi nhiều người đồng thời chỉnh sửa trên một văn bản chung, việc vô tình xóa hoặc ghi đè lên nội dung của nhau rất dễ xảy ra, gây mất dữ liệu và khó theo dõi đóng góp cá nhân.<br><strong>Giải pháp</strong>: Yêu cầu bắt buộc 100% thành viên sử dụng tính năng Đề xuất (Suggesting) trên Google Docs. Quy trình này giúp dễ dàng đối chiếu, chấp nhận ý tưởng hay qua Lịch sử phiên bản mà vẫn bảo toàn tính toàn vẹn của văn bản gốc."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Thách thức 3: Nhiễu loạn thông tin và thất lạc tài liệu trong nhóm chat"
+    },
+    {
+      "type": "text",
+      "content": "<strong>Phân tích</strong>: Luồng thảo luận trên các ứng dụng nhắn tin diễn ra quá nhanh khiến các tệp tin quan trọng hoặc quyết định cuối cùng bị trôi mất, gây lãng phí thời gian tìm kiếm lại.<br><strong>Giải pháp</strong>: Thực hiện chiến lược \"Số hóa kho lưu trữ\", chuyển và đồng bộ toàn bộ kết quả thảo luận vào hệ thống thư mục Google Drive đa cấp. Sử dụng duy nhất một tin nhắn Ghim (Pin) trên Zalo dẫn link Drive tổng, đảm bảo các thành viên luôn tiếp cận chính xác phiên bản tài liệu cuối cùng."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "IV. Kết luận & Trưởng thành cá nhân (Reflection)"
+    },
+    {
+      "type": "text",
+      "content": "Nhiệm vụ thực hành này đã giúp em làm chủ hoàn toàn các công cụ cộng tác trực tuyến nâng cao, tối ưu hóa thành công không gian làm việc số và đóng góp thiết thực vào kết quả chung của nhóm.<br><br>Là một sinh viên ngành Công nghệ Thông tin tại UET, em hiểu rằng năng lực làm việc trong môi trường số không chỉ nằm ở việc biết sử dụng công cụ, mà cốt lõi là tư duy tổ chức, khả năng thiết lập quy trình khoa học và năng lực điều phối hệ thống tệp tin minh bạch. Việc rèn luyện kỹ năng này giúp em sẵn sàng đối mặt với các dự án mã nguồn mở phức tạp, các hoạt động phát triển phần mềm theo nhóm lớn và phương pháp làm việc linh hoạt (Agile/Scrum) trong tương lai."
+    }
+  ],
+  "driveLink": "https://drive.google.com/file/d/1C5YjDS5osQc2xiOE4iWXqjEzUcYo4hKP/view?usp=sharing"
+}

@@ -1,0 +1,119 @@
+{
+  "id": 6,
+  "title": "Sử dụng AI có trách nhiệm",
+  "subtitle": "Bài tập 6 - Mục 4.1",
+  "icon": "⚖️",
+  "description": "Báo cáo thực hành: Phân tích chính sách quản trị công nghệ, thực nghiệm quy trình tương tác minh bạch và thiết lập bộ 6 nguyên tắc đạo đức AI cá nhân.",
+  "tags": [
+    "AI Ethics",
+    "Academic Integrity",
+    "AI Governance"
+  ],
+  "status": "done",
+  "displayMode": "parsed",
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Sử dụng AI có trách nhiệm trong học tập và nghiên cứu"
+    },
+    {
+      "type": "text",
+      "content": "Báo cáo thực hành: Phân tích chính sách quản trị công nghệ, thực nghiệm quy trình tương tác minh bạch và thiết lập bộ 6 nguyên tắc đạo đức AI cá nhân.<br><br><em>Môn học: Nhập môn CNS-AI | Họ tên: Đào Văn Hoàng Gia - MSSV: 25020134</em>"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "I. Phân tích chính sách học thuật về AI (UET vs NUS)"
+    },
+    {
+      "type": "text",
+      "content": "Nghiên cứu và phân tích sâu sắc các văn bản quy chế giúp định vị chính xác hành vi sử dụng công nghệ hợp pháp trong môi trường đại học:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Tổng quan chính sách tại UET - ĐHQGHN</strong>: Trường Đại học Công nghệ áp dụng triết lý \"mở cửa có kiểm soát\". Nhà trường không cấm đoán cứng nhắc mà chủ động trang bị năng lực số cho tân sinh viên ngay từ năm nhất thông qua học phần bắt buộc VNU1001. Quy chế cho phép khai thác AI để hỗ trợ tư duy (tìm ý tưởng, tối ưu mã nguồn, sửa ngữ pháp) nhưng yêu cầu bắt buộc phải minh bạch hóa quy trình.",
+        "<strong>Điểm chặt chẽ & Vùng xám</strong>: Hành vi sao chép nguyên bản (copy-paste) từ AI được định nghĩa là gian lận học thuật. Người học phải chịu trách nhiệm giải trình 100% về rủi ro ảo giác thông tin và tuyệt đối không được tải các dữ liệu mật, mã nguồn chưa công bố lên các mô hình AI công cộng. Tuy nhiên, mức độ nới lỏng phụ thuộc vào đề cương chi tiết (Syllabus) của từng giảng viên bộ môn do các công cụ AI Detector chưa đạt độ chính xác tuyệt đối.",
+        "<strong>Đối sánh quốc tế với Đại học Quốc gia Singapore (NUS)</strong>: Trong khi UET trao quyền chủ động cho giảng viên và yêu cầu khai báo chung, NUS xây dựng hẳn \"Khung năng lực Generative AI\" chi tiết cho từng ngành, áp dụng hệ thống quản lý \"Đèn giao thông\" (Cấm - Dùng có điều kiện - Khuyến khích) và bắt buộc trích dẫn chuẩn hóa theo APA 7th cho từng câu lệnh Prompt."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "II. Thực nghiệm quy trình tương tác minh bạch (Human-in-the-loop)"
+    },
+    {
+      "type": "text",
+      "content": "Để minh chứng cho quy trình sử dụng AI có trách nhiệm, em đã thực hiện nhiệm vụ lên dàn ý và viết bài luận: \"Thách thức và cơ hội của việc áp dụng AI trong hệ thống giáo dục đại học tại Việt Nam\" qua mô hình tương tác kết hợp năng lực con người:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Giai đoạn 1 (Khởi tạo cấu trúc - Role-playing)</strong>: Sử dụng Prompt gán vai chuyên gia EdTech để lập dàn ý chuyên sâu. AI trả về cấu trúc 3 phần mạch lạc, phân tích sâu sắc nguy cơ gian lận \"thông minh\" và hội chứng \"trí tuệ thuê ngoài\".",
+        "<strong>Giai đoạn 2 (Phát triển nội dung - Chain-of-Thought)</strong>: Sử dụng Prompt yêu cầu áp dụng tư duy lập luận chuỗi để viết đoạn văn hoàn chỉnh khoảng 350 từ, làm rõ mối quan hệ nguyên nhân - hệ quả của việc lạm dụng AI dẫn đến suy giảm năng lực tự học.",
+        "<strong>Giai đoạn 3 (Can thiệp và Tích hợp của con người)</strong>: Em chủ động phát hiện điểm yếu của AI khi đưa ra các ví dụ chung chung mang tính giáo khoa. Em thực hiện can thiệp chuyên môn, chỉnh sửa lại 35% nội dung bằng cách: Thay thế ví dụ của máy thành tình huống thực tế tại trường kỹ thuật (sinh viên lạm dụng AI viết bài luận phân tích hệ thống nhưng bỏ qua việc đọc tài liệu gốc - Documentation) và bổ sung luận điểm thực tế về giải pháp đào tạo bắt buộc môn VNU1001 tại ĐHQGHN."
+      ]
+    },
+    {
+      "type": "text",
+      "content": "<strong>[Tuyên bố sử dụng AI]</strong>: Đoạn văn phân tích tại Mục III của báo cáo có sự hỗ trợ của Google Gemini trong việc tối ưu cấu trúc ngữ pháp học thuật. Toàn bộ phần phản biện ví dụ thực tế và lồng ghép bối cảnh học phần VNU1001 tại ĐHQGHN đều do sinh viên tự thực hiện thủ công."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "III. Phân tích ba thách thức đạo đức cốt lõi trong học thuật"
+    },
+    {
+      "type": "text",
+      "content": "Việc ứng dụng AI tạo sinh đặt sinh viên công nghệ trước 3 thách thức đạo đức có mối quan hệ biện chứng chặt chẽ:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Ranh giới giữa hỗ trợ hợp lý và gian lận học thuật</strong>: Hỗ trợ hợp lý khi AI là một \"đối tác tư duy\" giúp giải thích nguyên lý hoặc tìm lỗi logic khi debug thuật toán. Gian lận xuất hiện khi chuyển sang hình thức \"viết hộ kỹ thuật số\", phó mặc hoàn toàn cho AI sinh toàn bộ mã nguồn hoặc giải bài tập lớn rồi sao chép nguyên văn để nộp.",
+        "<strong>Vùng xám sở hữu trí tuệ và đạo văn phái sinh</strong>: LLMs được huấn luyện bằng cách thu thập hàng tỷ dữ liệu có bản quyền và các kho mã nguồn mở không công khai. Việc sử dụng thụ động dữ liệu từ máy mà thiếu kiểm chứng chéo và đối chiếu giáo trình gốc sẽ biến sinh viên thành một mắt xích trong chuỗi \"đạo văn phái sinh\", đặc biệt nguy hiểm trước rủi ro \"ảo giác AI\" tự bịa đặt số liệu.",
+        "<strong>Hội chứng \"lười tư duy thứ cấp\" thui chột kỹ năng cốt lõi</strong>: Bản chất của việc học lập trình hay toán học bậc cao là rèn luyện tư duy máy tính qua quá trình khó khăn của việc \"thử và sai\". Né tránh sự bế tắc lành mạnh này bằng câu trả lời tức thời của AI sẽ làm triệt tiêu các liên kết nơ-ron thần kinh giải quyết vấn đề phức tạp, biến người học thành thế hệ \"thợ dùng tool\" hời hợt."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "IV. Bộ 6 nguyên tắc ứng xử cá nhân về AI có trách nhiệm"
+    },
+    {
+      "type": "text",
+      "content": "Để chủ động đối ứng với các thách thức đạo đức trên, em tự thiết lập bộ nguyên tắc hành động mang tính thực tiễn cao:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Nguyên tắc \"Làm chủ nền tảng trước khi tăng tốc\" (Mastery before Acceleration)</strong>: Tuyệt đối không sử dụng AI khi bản thân chưa nắm vững kiến thức cốt lõi (thuật toán cơ sở, cấu trúc dữ liệu, nguyên lý OOP). Cam kết thấu hiểu bản chất gốc rễ trước khi dùng AI để tối ưu hiệu suất.",
+        "<strong>Nguyên tắc \"Đối tác tư duy, không phải thực thể viết hộ\" (Sparring Partner, Not Ghostwriter)</strong>: Chuyển từ ra lệnh thụ động sang đặt câu hỏi chủ động. Sử dụng AI để khơi gợi ý tưởng; khi gặp lỗi code, yêu cầu AI gợi ý phương pháp giải quyết thay vì bắt máy viết hộ toàn bộ đoạn mã.",
+        "<strong>Nguyên tắc \"Hoài nghi thuật toán - Zero Trust\" (Cross-Verification)</strong>: Mặc định mọi kết quả, số liệu do AI trả về đều có thể chứa sai sót. Luôn kiểm chứng chéo và đối chiếu với các nguồn chính thống (giáo trình, tài liệu kỹ thuật chính thức) trước khi đưa vào bài làm.",
+        "<strong>Nguyên tắc \"Minh bạch hóa dấu vết học thuật\" (Full Disclosure)</strong>: Tuân thủ nghiêm ngặt quy chế môn học. Luôn chủ động khai báo trung thực mức độ can thiệp của công nghệ thông qua việc công khai câu lệnh prompt đã dùng ở mục phụ lục.",
+        "<strong>Nguyên tắc \"Sáng tạo và cá nhân hóa nội dung\" (Contextualization)</strong>: Nói không với copy-paste. Luôn sử dụng ngôn từ, cấu trúc câu và lăng kính cá nhân để paraphrase; đồng thời lồng ghép các số liệu, ví dụ thực tế gắn liền với bối cảnh nhà trường để tạo giá trị riêng cho bài làm.",
+        "<strong>Nguyên tắc \"Bảo mật tài sản dữ liệu số\" (Data Privacy First)</strong>: Ý thức rõ rủi ro bảo mật dữ liệu. Cam kết tuyệt đối không tải lên không gian AI các dữ liệu nhạy cảm, mã nguồn dự án nội bộ chưa công bố trên GitHub cá nhân, hay thông tin của giảng viên và bạn bè."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "V. Kết luận & Minh họa trực quan (Reflection)"
+    },
+    {
+      "type": "text",
+      "content": "Học phần thực hành này đã giúp em làm rõ ranh giới đạo đức công nghệ và định hình phong cách làm việc chuyên nghiệp của một kỹ sư IT tương lai. Làm chủ AI là làm chủ công cụ, tuyệt đối không để công cụ làm chủ tư duy của chúng ta."
+    },
+    {
+      "type": "image",
+      "src": "assets/z7912349160959_6992d492f595896af5807c05a044fddc.jpg",
+      "caption": "Hình 1: Infographic Cẩm nang sử dụng AI có trách nhiệm trong học thuật"
+    }
+  ],
+  "driveLink": "https://drive.google.com/file/d/1ItaNMzsFn2rTFkgTdIM5i0JelSpuvTOb/view?usp=sharing"
+}

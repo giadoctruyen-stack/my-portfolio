@@ -1,0 +1,165 @@
+{
+  "id": 5,
+  "title": "Sáng tạo nội dung số với AI",
+  "subtitle": "Bài tập 5 - Mục 5.4",
+  "icon": "🎨",
+  "description": "Báo cáo thực hành: Quy trình phối hợp đa nền tảng AI tạo sinh để thiết kế và xuất bản ấn phẩm truyền thông số chuyên nghiệp.",
+  "tags": [
+    "AI",
+    "Digital Content",
+    "ChatGPT",
+    "Canva",
+    "ImagineArt"
+  ],
+  "status": "done",
+  "displayMode": "parsed",
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung"
+    },
+    {
+      "type": "text",
+      "content": "Báo cáo thực hành: Quy trình phối hợp đa nền tảng AI tạo sinh để thiết kế và xuất bản ấn phẩm truyền thông số chuyên nghiệp.<br><br><em>Môn học: Nhập môn CNS-AI | Họ tên: Đào Văn Hoàng Gia - MSSV: 25020134</em>"
+    },
+    {
+      "type": "text",
+      "content": "<strong>Báo cáo dự án sáng tạo nội dung số</strong><br><strong>Chủ đề sản phẩm</strong>: AI thay đổi cách sinh viên học tập: Thách thức & Giải pháp.<br><strong>Hình thức sản phẩm</strong>: Bài viết/Blog điện tử (Trình bày trên khổ A4 bằng Canva)."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "I. Mục tiêu thiết lập"
+    },
+    {
+      "type": "text",
+      "content": "Ứng dụng và tích hợp sâu chuỗi công cụ AI tạo sinh (Generative AI) bao gồm văn bản, hình ảnh và đồ họa để sản xuất một bài tạp chí phân tích chuyên sâu. Dự án đi sâu đánh giá tính hai mặt (lợi ích và rủi ro đạo đức) của AI trong môi trường học thuật, đồng thời thể hiện năng lực làm chủ, kiểm chứng và biên tập nội dung của con người nhằm bảo toàn tính liêm chính học thuật."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "II. Lộ trình thực hiện & Minh chứng tích hợp AI tạo sinh"
+    },
+    {
+      "type": "text",
+      "content": "Quá trình hoàn thiện sản phẩm trải qua sự tương tác và tối ưu hóa liên tục giữa tư duy con người và năng lực xử lý của 3 công cụ AI độc lập:"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "1. Biên soạn nội dung văn bản (Phối hợp cùng Google Gemini)"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Prompt tầng 1 (Lên khung ý tưởng)</strong>: Gán vai chuyên gia giáo dục, yêu cầu phân tích cách AI tái định nghĩa phương pháp luận đại học từ hấp thụ thụ động sang tương tác chủ động (học dạng cuốn chiếu micro-learning, giải mã cấu trúc logic step-by-step).",
+        "<strong>Prompt tầng 2 (Đào sâu phản biện)</strong>: Yêu cầu viết lại với giọng văn khách quan, mang tính cảnh báo và chèn thêm ví dụ thực tế về rủi ro sai lệch thông tin — hiện tượng \"ảo giác\" (hallucination) khi AI tự bịa đặt tên bài báo khoa học và danh sách tác giả không tồn tại.",
+        "<strong>Đóng góp cá nhân</strong>: Em đóng vai trò là \"biên tập viên khắt khe\". Tuyệt đối không sao chép nguyên xi dữ liệu của máy, em tiến hành chọn lọc ý chính, gọt giũa câu từ, viết bổ sung hoàn chỉnh phần mở đầu và kết luận để tạo mạch liên kết logic cho bài viết."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "2. Sáng tạo nghệ thuật trực quan (Phối hợp cùng ImagineArt)"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Cú pháp lệnh sử dụng</strong>: <code>\"A high-quality digital illustration of a university student sitting at a desk. On the left side, there are heavy printed books and a notebook. On the right side, there are glowing futuristic digital screens showing data nodes and an AI companion glowing orb. Cinematic lighting, cyberpunk style, concept art.\"</code>",
+        "<strong>Đóng góp cá nhân</strong>: Thử nghiệm liên tục nhiều từ khóa mở rộng, tinh chỉnh các tham số ánh sáng có chiều sâu để AI hiểu đúng ý đồ nghệ thuật và chọn ra bức ảnh xuất sắc nhất thể hiện sự giao thoa giữa học tập truyền thống và kỷ nguyên số."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "assets/e45190a6-8089-46f9-b6c7-3b0a170e9ea7.jfif",
+      "caption": "Hình 1: Quá trình thiết kế và tối ưu câu lệnh Prompt để tạo ảnh minh họa độc bản trên ImagineArt"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "3. Thiết kế đồ họa và dàn trang bài viết (Phối hợp cùng Canva AI)"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Thực thi công nghệ</strong>: Kích hoạt tính năng Magic Design của Canva với câu lệnh: <em>\"Tạo bố cục bài viết blog công nghệ về việc sinh viên sử dụng AI để học tập\"</em> để AI tự động phân tích từ khóa và gợi ý các layout bố cục dạng blog điện tử hiện đại.",
+        "<strong>Đóng góp cá nhân</strong>: Đóng vai trò quyết định cấu trúc mỹ thuật. Em thực hiện chia đoạn, căn lề thủ công, phối màu nền ăn khớp với dải màu sắc của bức ảnh ImagineArt. Đặc biệt, em rà soát lại hệ thống typography và thay đổi toàn bộ phông chữ mặc định của AI nhằm khắc phục triệt để lỗi hiển thị font tiếng Việt trên bản in cuối cùng."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "assets/52cd8819-1d27-4f9f-a196-d89751353149.jfif",
+      "caption": "Hình 2: Ứng dụng Canva Magic Design hỗ trợ định hình và sắp xếp bố cục đồ họa ấn phẩm"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "III. Ma trận so sánh & Đánh giá hiệu quả các công cụ AI tạo sinh"
+    },
+    {
+      "type": "text",
+      "content": "Trải nghiệm thực tế dự án giúp em đúc kết ma trận đánh giá ưu - nhược điểm đặc thù của từng hệ thống công cụ:"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Nền tảng AI",
+        "Điểm mạnh cốt lõi",
+        "Hạn chế/Điểm yếu",
+        "Biện pháp can thiệp thủ công"
+      ],
+      "rows": [
+        [
+          "Google Gemini (Văn bản)",
+          "Phân tích logic tốt, cấu trúc mạch lạc, phản hồi nhanh và xử lý tiếng Việt tự nhiên.",
+          "Có xu hướng lạm dụng các cụm từ rập khuôn, sáo rỗng nếu câu lệnh thiếu rành mạch.",
+          "Chọn lọc ý chính, gọt giũa câu từ, viết lại mở/kết để thổi hồn vào văn bản."
+        ],
+        [
+          "ImagineArt (Hình ảnh)",
+          "Xuất sắc trong việc nhận diện phong cách nghệ thuật phức tạp (Cyberpunk), tạo ánh sáng sâu.",
+          "Bắt buộc sử dụng tiếng Anh, yêu cầu mô tả từ khóa cực kỳ chi tiết, phải tạo mới nhiều lần.",
+          "Thực hiện Prompt Engineering liên tục, thay đổi từ khóa đặc tả để lọc ảnh tối ưu."
+        ],
+        [
+          "Canva AI (Đồ họa/Layout)",
+          "Khả năng tự động đồng bộ màu sắc và phân chia khung bố cục nhanh chóng từ prompt ngắn.",
+          "Đối với văn bản dài, bố cục tự động dễ bị lộn xộn hoặc tràn viền hiển thị.",
+          "Dành 30% thời gian để tự tay chia đoạn, căn lề và thay đổi toàn bộ typography lỗi font Việt hóa."
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "IV. Vai trò của AI và Các vấn đề đạo đức trong sáng tạo (Reflection)"
+    },
+    {
+      "type": "text",
+      "content": "Sự xuất hiện của AI tạo sinh giải phóng người học khỏi các khâu tìm kiếm thô sơ và dàn trang tẻ nhạt, đóng vai trò một \"người phác thảo\" (dựng ý, vẽ ảnh) hữu ích. Điều này cho phép em tập trung 100% sức lực vào việc kiểm chứng logic và nâng cao giá trị nội dung."
+    },
+    {
+      "type": "text",
+      "content": "Tuy nhiên, bài tập này khắc sâu trong em nhận thức về thách thức đạo đức nghiêm trọng trong môi trường học thuật. Rủi ro lớn nhất chính là hiện tượng \"ảo giác\" thông tin của AI. Nếu sinh viên sao chép thụ động mà không đối chiếu giáo trình gốc, điều đó sẽ hủy hoại tư duy phản biện và vi phạm nghiêm trọng tính liêm chính học thuật.<br><br>Do đó, nguyên tắc tối thượng của em là: AI chỉ là công cụ gợi mở, không được phép thay thế tư duy phản biện cá nhân. Sản phẩm hoàn thiện dưới đây mang đậm dấu ấn sáng tạo cá nhân với hơn 50% khối lượng công việc đến từ sự biên tập và sắp xếp thủ công nghiêm túc."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "V. Sản phẩm hoàn thiện"
+    },
+    {
+      "type": "text",
+      "content": "🔗 Link truy cập sản phẩm thiết kế đầy đủ trên Canva: <a href=\"https://canva.link/bgxrzkenjeo8bzw\" target=\"_blank\">https://canva.link/bgxrzkenjeo8bzw</a>"
+    },
+    {
+      "type": "image",
+      "src": "assets/91ad796d-b53d-43de-9360-227451d30e59.jfif",
+      "caption": "Hình 3: Giao diện ấn phẩm truyền thông số hoàn thiện được xuất bản chính thức trên nền tảng Canva"
+    }
+  ],
+  "driveLink": "https://drive.google.com/file/d/1YQURFzyfxeQQqKSpzs3e_nrQR5MunW63/view?usp=sharing"
+}

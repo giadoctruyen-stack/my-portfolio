@@ -1,0 +1,135 @@
+{
+  "id": 2,
+  "title": "Tìm kiếm & đánh giá thông tin",
+  "subtitle": "Bài tập 2 - Mục 3.4",
+  "icon": "🔍",
+  "description": "Báo cáo đánh giá và tổng hợp nguồn tin học thuật. Chủ đề: Ứng dụng Học liên kết (Federated Learning) trong hệ thống phát hiện xâm nhập (IDS) nhằm bảo mật dữ liệu mạng Internet vạn vật (IoT).",
+  "tags": [
+    "Research",
+    "Critical Thinking",
+    "Academic"
+  ],
+  "status": "done",
+  "displayMode": "parsed",
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Tìm kiếm và Đánh giá Thông tin Học thuật"
+    },
+    {
+      "type": "text",
+      "content": "Báo cáo thực hành: Tối ưu hóa chiến lược truy vấn thông tin khoa học nâng cao và thiết lập ma trận đánh giá độ tin cậy tài liệu nghiên cứu."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "1. Chiến lược Tìm kiếm & Cú pháp Toán tử Nâng cao"
+    },
+    {
+      "type": "text",
+      "content": "Để thu thập học liệu chính thống phục vụ nghiên cứu chủ đề \"Ứng dụng Học liên kết (Federated Learning) trong hệ thống phát hiện xâm nhập (IDS) nhằm bảo mật dữ liệu mạng Internet vạn vật (IoT)\", em đã thực thi chiến lược truy vấn đa kênh phối hợp linh hoạt các toán tử logic nhằm đảm bảo tính toàn diện:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "<strong>Toán tử dấu ngoặc kép (\"\") & AND</strong>: Định vị chính xác cụm từ kỹ thuật chuyên ngành và liên kết chặt chẽ các phân hệ kiến thức cốt lõi: <code>\"Federated Learning\" AND \"Intrusion Detection System\" AND \"IoT Security\"</code>.",
+        "<strong>Toán tử định dạng file (filetype:)</strong>: Lọc trực tiếp định dạng tài liệu phẳng chứa báo cáo khoa học hoặc bài báo tạp chí: <code>filetype:pdf \"Federated Learning\" AND \"collaborative machine learning\"</code>.",
+        "<strong>Toán tử giới hạn nguồn (site:)</strong>: Khoanh vùng khai thác dữ liệu trong các cổng xuất bản khoa học quốc tế uy tín hoặc hệ thống học liệu số nội địa:<br>• Khai thác cơ sở dữ liệu quốc tế: <code>site:ieee.org \"Federated Learning\" AND \"Internet of Things\"</code>.<br>• Khai thác kho tri thức ĐHQGHN: <code>site:repository.vnu.edu.vn \"Học liên kết\" OR \"phát hiện xâm nhập\"</code>."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "2. Ma trận Đánh giá & Xếp hạng Độ tin cậy Nguồn tin"
+    },
+    {
+      "type": "text",
+      "content": "Hệ thống hóa và phân cấp phản biện toàn bộ các nguồn thông tin đã thu thập dựa trên các tiêu chí khoa học (Tác giả, Cơ quan xuất bản, Phương pháp nghiên cứu, Chỉ số trích dẫn và Tính cập nhật):"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "STT",
+        "Tên tài liệu / Nguồn",
+        "Loại hình",
+        "Cơ quan xuất bản",
+        "Tiêu chí đánh giá độ tin cậy",
+        "Xếp hạng"
+      ],
+      "rows": [
+        [
+          "1",
+          "Federated Learning for IoT: A Survey",
+          "Tạp chí",
+          "IEEE",
+          "Đội ngũ giáo sư từ Princeton/Sydney. Tạp chí uy tín hàng đầu, số lượt trích dẫn cực cao (>1200), cung cấp khung lý thuyết chuẩn.",
+          "5/5"
+        ],
+        [
+          "2",
+          "Nghiên cứu bảo mật IoT dựa trên ML",
+          "Luận văn",
+          "VNU-Lic (UET)",
+          "Học viên cao học tại UET nghiên cứu dưới sự hướng dẫn của PGS/TS đầu ngành Khoa CNTT, đã bảo vệ trước hội đồng khoa học.",
+          "4.5/5"
+        ],
+        [
+          "3",
+          "Federated Learning (Sách)",
+          "Sách",
+          "Morgan & Claypool",
+          "Tác giả Qiang Yang là chuyên gia đầu ngành (\"cha đẻ\" của ngành FL hiện đại), độ tin cậy tuyệt đối về mặt toán học và lý thuyết nền tảng.",
+          "5/5"
+        ],
+        [
+          "4",
+          "VNU Journal of Science (CS&C)",
+          "Tạp chí",
+          "ĐHQGHN",
+          "Tạp chí khoa học chính thống đầu ngành tại Việt Nam, quy trình phản biện kín nghiêm ngặt đảm bảo chất lượng học thuật.",
+          "4.5/5"
+        ],
+        [
+          "5",
+          "Google AI Blog (FL Concepts)",
+          "Website",
+          "Google Research",
+          "Do đội ngũ kỹ sư công nghệ của Google biên soạn, tính thực tiễn và ứng dụng cực cao, trực quan sinh động nhưng thiếu phản biện học thuật khắt khe.",
+          "4/5"
+        ],
+        [
+          "6",
+          "NIST SP 800-183 (IoT Trust)",
+          "Tiêu chuẩn",
+          "NIST (USA)",
+          "Ban hành bởi Viện Tiêu chuẩn và Công nghệ Quốc gia Hoa Kỳ, cung cấp quy chuẩn kỹ thuật cấp chính phủ chuẩn mực cao.",
+          "5/5"
+        ],
+        [
+          "7",
+          "arXiv: Poisoning attacks in FL",
+          "Preprint",
+          "Cornell University",
+          "Kho lưu trữ của Đại học Cornell, cập nhật những rủi ro bảo mật và xu hướng mới rất nhanh nhưng chưa qua quy trình phản biện đồng nghiệp.",
+          "3.5/5"
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "3. Tư duy Phản biện & Đánh giá chiến lược (Reflection)"
+    },
+    {
+      "type": "text",
+      "content": "Quá trình thực hiện Bài tập 2 giúp em hình thành tư duy bộ lọc dữ liệu sâu sắc trong môi trường số. Đối với một sinh viên ngành Công nghệ Thông tin, việc phân biệt rõ ràng giữa tài liệu đã qua phản biện nghiêm ngặt (Peer-reviewed như các tạp chí IEEE, VNU Journal) với các bản thảo chưa phản biện (Preprint như arXiv) hay bài blog là kỹ năng cốt lõi để bảo toàn tính minh bạch và liêm chính học thuật."
+    },
+    {
+      "type": "text",
+      "content": "<strong>Chiến lược kết hợp đa tầng</strong>: dùng Sách/Tiêu chuẩn làm móng lý thuyết vững chắc, dùng Tạp chí quốc tế để nắm bắt công nghệ đỉnh cao, và dùng Luận văn VNU để tiếp cận phương pháp triển khai thực tế phù hợp với quy chuẩn nội địa chính là chìa khóa giúp em tối ưu hóa năng lực tự học và sẵn sàng cho các nghiên cứu chuyên sâu trong tương lai."
+    }
+  ],
+  "driveLink": "https://drive.google.com/file/d/1ihzDCm6-11Zsvi3s6CopY9N8uAxVAKfY/view?usp=drive_link"
+}
