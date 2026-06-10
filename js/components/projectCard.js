@@ -82,12 +82,12 @@ export function renderProjectCard(project, index) {
  */
 export function renderProjectDetail(project) {
   const defaultPdfs = {
-    1: 'baitap1to6/bai1_cns.pdf',
-    2: 'baitap1to6/25020066_bai2_hoangtrungdung.pdf',
-    3: 'baitap1to6/25020066_bai3_hoangtrungdung.pdf',
-    4: 'baitap1to6/bai4_cns.docx',
-    5: 'baitap1to6/25020066_bai5_haongtrungdung.pdf',
-    6: 'baitap1to6/bai6_Báo cáo_ Sử dụng AI có trách nhiệm trong học thuật.pdf'
+    1: 'projects/bai-tap-1/B%C3%A0i%20T%E1%BA%ADp%201.pdf',
+    2: 'projects/bai-tap-2/b%C3%A0i%20t%E1%BA%ADp%202.pdf',
+    3: 'projects/bai-tap-3/b%C3%A0i%20t%E1%BA%ADp%203.pdf',
+    4: 'projects/bai-tap-4/tmpou0fkb_bai-3t4.pdf',
+    5: 'projects/bai-tap-5/b%C3%A0i%20t%E1%BA%ADp%205.pdf',
+    6: 'projects/bai-tap-6/tmpqxjjld_bai-4-b6.pdf'
   };
 
   const pdfPath = project.pdfFile || defaultPdfs[project.id];
