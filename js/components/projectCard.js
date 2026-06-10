@@ -82,12 +82,12 @@ export function renderProjectCard(project, index) {
  */
 export function renderProjectDetail(project) {
   const defaultPdfs = {
-    1: 'projects/bai-tap-1/B%C3%A0i%20T%E1%BA%ADp%201.pdf',
-    2: 'projects/bai-tap-2/b%C3%A0i%20t%E1%BA%ADp%202.pdf',
-    3: 'projects/bai-tap-3/b%C3%A0i%20t%E1%BA%ADp%203.pdf',
-    4: 'projects/bai-tap-4/tmpou0fkb_bai-3t4.pdf',
-    5: 'projects/bai-tap-5/b%C3%A0i%20t%E1%BA%ADp%205.pdf',
-    6: 'projects/bai-tap-6/tmpqxjjld_bai-4-b6.pdf'
+    1: 'projects/bai-tap-1/baitap1.pdf',
+    2: 'projects/bai-tap-2/baitap2.pdf',
+    3: 'projects/bai-tap-3/baitap3.pdf',
+    4: 'projects/bai-tap-4/baitap4.pdf',
+    5: 'projects/bai-tap-5/baitap5.pdf',
+    6: 'projects/bai-tap-6/baitap6.pdf'
   };
 
   const pdfPath = project.pdfFile || defaultPdfs[project.id];
