@@ -22,9 +22,13 @@ const PERSONAL_INFO = {
   year: 'Năm 1',
   mssv: '25020134',
   email: 'giadoctruyen@gmail.com',
+  hobbies: 'Nghiên cứu các công cụ AI tạo sinh và đọc sách khoa học viễn tưởng, tìm hiểu những kiến thức mới',
 
   // Giới thiệu bản thân
   bio: 'Em là Đào Văn Hoàng Gia, sinh viên năm nhất khoa CNTT - UET. Sở thích của em là nghiên cứu các công cụ AI tạo sinh và đọc sách khoa học viễn tưởng. Mục tiêu học tập của em là làm chủ các kỹ năng số cốt lõi để định hướng trở thành một Chuyên gia trong lĩnh vực Trí tuệ nhân tạo.<br><br>Trang web này đóng vai trò là Portfolio cá nhân của em, được xây dựng với mục đích lưu trữ các sản phẩm cá nhân để dễ dàng truy cập và chia sẻ, hệ thống hóa trọn vẹn hành trình rèn luyện 6 bài tập môn học.',
+
+  personalGoals: 'Làm chủ các năng lực số cốt lõi, xây dựng tư duy thuật toán và kỹ năng lập trình vững chắc tại UET. Định hướng nghiên cứu chuyên sâu về Học máy và Trí tuệ nhân tạo (AI) nhằm giải quyết các bài toán hệ thống thực tiễn, từng bước trở thành một Kỹ sư phần mềm chuyên nghiệp.',
+  portfolioGoals: 'Hệ thống hóa toàn diện hành trình rèn luyện 6 bài tập môn học nhằm minh bạch hóa các năng lực số đã tích lũy. Không gian này được thiết lập để lưu trữ sản phẩm cá nhân để dễ dàng truy cập và chia sẻ, phục vụ hiệu quả cho việc tự phản biện và kết nối với giảng viên, nhà tuyển dụng.',
 
   // Phương châm cá nhân
   quote: '"Sáng tạo không giới hạn trong tư duy, kỷ luật tuyệt đối trong hành động."',
@@ -132,80 +136,105 @@ function renderMarqueeRow(items, reverse = false) {
 
 export function renderIntroPage() {
   return `
-    <!-- Hero Section (MS365 style) -->
-    <section class="hero" id="hero-section">
+    <!-- Merged Hero & About Section -->
+    <section class="hero-about-section" id="hero-about-section">
       <div class="container">
-        <div class="hero__content">
-          <p class="hero__greeting reveal">
-            <span class="wave">👋</span>
-            <span>${PERSONAL_INFO.greeting}</span>
-          </p>
-          <h1 class="hero__name reveal text-plasma">
-            ${PERSONAL_INFO.name}
-          </h1>
-          <p class="hero__subtitle reveal">
-            ${PERSONAL_INFO.subtitle}
-          </p>
-          <div class="hero__cta reveal">
-            <a href="#/projects" class="btn btn--primary btn--lg" id="cta-projects">
-              Khám phá dự án
-            </a>
-            <a href="#/summary" class="btn btn--outline btn--lg" id="cta-summary">
-              Tổng kết hành trình
-            </a>
+        <div class="hero-about-grid">
+          
+          <!-- Column 1: Profile Card (Avatar, Greeting, Name, Subtitle, Info List, CTA) -->
+          <div class="profile-card-col reveal reveal--left">
+            <div class="profile-avatar-wrapper">
+              <img class="about__avatar" src="assets/images/profilepic.jpg" alt="${PERSONAL_INFO.name}">
+            </div>
+
+            <div class="profile-details-wrapper">
+              <div class="profile-heading">
+                <p class="hero__greeting">
+                  <span class="wave">👋</span>
+                  <span>${PERSONAL_INFO.greeting}</span>
+                </p>
+                <h1 class="hero__name text-plasma">
+                  ${PERSONAL_INFO.name}
+                </h1>
+                <p class="hero__subtitle">
+                  ${PERSONAL_INFO.subtitle}
+                </p>
+              </div>
+              
+              <div class="info-list">
+                <div class="info-item">
+                  <span class="info-item__icon">🏫</span>
+                  <span class="info-item__label">Trường:</span>
+                  <span class="info-item__value">${PERSONAL_INFO.school}</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-item__icon">📚</span>
+                  <span class="info-item__label">Ngành:</span>
+                  <span class="info-item__value">${PERSONAL_INFO.major}</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-item__icon">🎓</span>
+                  <span class="info-item__label">Năm:</span>
+                  <span class="info-item__value">${PERSONAL_INFO.year}</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-item__icon">🪪</span>
+                  <span class="info-item__label">MSSV:</span>
+                  <span class="info-item__value">${PERSONAL_INFO.mssv}</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-item__icon">📧</span>
+                  <span class="info-item__label">Email:</span>
+                  <span class="info-item__value">${PERSONAL_INFO.email}</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-item__icon">🎨</span>
+                  <span class="info-item__label">Sở thích:</span>
+                  <span class="info-item__value">${PERSONAL_INFO.hobbies}</span>
+                </div>
+              </div>
+
+              <div class="hero__cta">
+                <a href="#/projects" class="btn btn--primary" id="cta-projects">
+                  Khám phá dự án
+                </a>
+                <a href="#/summary" class="btn btn--outline" id="cta-summary">
+                  Tổng kết hành trình
+                </a>
+              </div>
+            </div>
           </div>
+
         </div>
-        <div class="hero__decoration" aria-hidden="true">
-          <div class="hero__orb hero__orb--1"></div>
-          <div class="hero__orb hero__orb--2"></div>
-          <div class="hero__orb hero__orb--3"></div>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="scroll-hint reveal">
+          <span class="scroll-hint__text">Xem tiếp bên dưới</span>
+          <span class="scroll-hint__icon">↓</span>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section" id="about-section">
+    <!-- Goals Section (Mục tiêu cá nhân & Portfolio) -->
+    <section class="section section--alt" id="goals-intro-section">
       <div class="container">
         <div class="section__header reveal">
-          <span class="section__label">Về mình</span>
-          <h2 class="section__title">Giới thiệu bản thân</h2>
+          <span class="section__label">Mục tiêu</span>
+          <h2 class="section__title">Định hướng & Mục tiêu</h2>
           <div class="divider"></div>
         </div>
-        <div class="about-grid">
-          <div class="about__avatar-wrapper reveal reveal--left">
-            <div class="about__avatar-glow"></div>
-            <img class="about__avatar" src="assets/images/profilepic.jpg" alt="Đào Văn Hoàng Gia">
+        
+        <div class="goals-grid-layout stagger-children">
+          <div class="card detail-card goals-card reveal reveal--left">
+            <div class="detail-card__icon">🚀</div>
+            <h3 class="detail-card__title">Mục tiêu cá nhân</h3>
+            <p class="goals-text">${PERSONAL_INFO.personalGoals}</p>
           </div>
-          <div class="about__info">
-            <p class="about__bio reveal">${PERSONAL_INFO.bio}</p>
-            <div class="info-list reveal">
-              <div class="info-item">
-                <span class="info-item__icon">🏫</span>
-                <span class="info-item__label">Trường</span>
-                <span class="info-item__value">${PERSONAL_INFO.school}</span>
-              </div>
-              <div class="info-item">
-                <span class="info-item__icon">📚</span>
-                <span class="info-item__label">Ngành</span>
-                <span class="info-item__value">${PERSONAL_INFO.major}</span>
-              </div>
-              <div class="info-item">
-                <span class="info-item__icon">🎓</span>
-                <span class="info-item__label">Năm</span>
-                <span class="info-item__value">${PERSONAL_INFO.year}</span>
-              </div>
-              <div class="info-item">
-                <span class="info-item__icon">🪪</span>
-                <span class="info-item__label">MSSV</span>
-                <span class="info-item__value">${PERSONAL_INFO.mssv}</span>
-              </div>
-              <div class="info-item">
-                <span class="info-item__icon">📧</span>
-                <span class="info-item__label">Email</span>
-                <span class="info-item__value">${PERSONAL_INFO.email}</span>
-              </div>
 
-            </div>
+          <div class="card detail-card portfolio-goals-card reveal reveal--right">
+            <div class="detail-card__icon">📁</div>
+            <h3 class="detail-card__title">Mục tiêu của Portfolio</h3>
+            <p class="goals-text">${PERSONAL_INFO.portfolioGoals}</p>
           </div>
         </div>
       </div>

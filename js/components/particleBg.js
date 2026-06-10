@@ -1,7 +1,7 @@
 /**
- * Abstract Wave Background - Microsoft 365 Light Style
- * Enhanced dynamic waves with strong multi-directional self-animation 
- * and highly noticeable scroll-driven horizontal + vertical morphing.
+ * Retro Brutalist Shapes Background
+ * Replaces organic waves with floating bold geometry (circles, squares, triangles, crosses)
+ * featuring thick outlines, offset shadows, and scroll parallax motion.
  */
 
 export default class ParticleBackground {
@@ -19,13 +19,42 @@ export default class ParticleBackground {
     this.isRunning = false;
     this.animationId = null;
 
+    // Initialize shapes
+    this.shapes = [];
+    
     this.init();
   }
 
   init() {
     this.resize();
     this.setupEvents();
+    this.initShapes();
     this.start();
+  }
+
+  initShapes() {
+    const colors = ['#0038ff', '#ff007f', '#ff5500', '#d4ff00', '#ffffff'];
+    const types = ['square', 'circle', 'cross', 'triangle'];
+    const width = this.canvas.width;
+    const height = this.canvas.height;
+    
+    this.shapes = [];
+    
+    // Generate 20 floating brutalist shapes
+    for (let i = 0; i < 20; i++) {
+      this.shapes.push({
+        x: Math.random() * width,
+        y: Math.random() * (height * 2), // Spread over virtual height for scrolling
+        size: 15 + Math.random() * 30,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        rotation: Math.random() * Math.PI * 2,
+        vRotation: (Math.random() - 0.5) * 0.006,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        type: types[Math.floor(Math.random() * types.length)],
+        parallaxFactor: 0.15 + Math.random() * 0.45
+      });
+    }
   }
 
   resize() {
@@ -42,7 +71,10 @@ export default class ParticleBackground {
   }
 
   setupEvents() {
-    window.addEventListener('resize', () => this.resize());
+    window.addEventListener('resize', () => {
+      this.resize();
+      this.initShapes();
+    });
     
     // Track scroll position
     window.addEventListener('scroll', () => {
@@ -51,137 +83,98 @@ export default class ParticleBackground {
   }
 
   update() {
-    // Increased update speed for more noticeable organic motion
-    this.time += 0.007; 
+    this.time += 0.005; 
     
     // Lerp scroll position for silky smooth movement on scroll
     this.scrollY += (this.targetScrollY - this.scrollY) * 0.08;
+
+    const width = this.canvas.width;
+    const height = this.canvas.height;
+
+    // Update shapes positions
+    this.shapes.forEach(shape => {
+      shape.x += shape.vx;
+      shape.y += shape.vy;
+      shape.rotation += shape.vRotation;
+
+      // Wrap around boundary coordinates
+      const maxVirtualHeight = height * 2.2;
+      
+      if (shape.x < -shape.size * 2) shape.x = width + shape.size;
+      if (shape.x > width + shape.size * 2) shape.x = -shape.size;
+      if (shape.y < -shape.size * 2) shape.y = maxVirtualHeight + shape.size;
+      if (shape.y > maxVirtualHeight + shape.size * 2) shape.y = -shape.size;
+    });
   }
 
   draw() {
     const width = this.canvas.width;
     const height = this.canvas.height;
     
-    // 1. Draw solid background color
-    this.ctx.fillStyle = '#faf8f6'; // M365 light soft sand/white bg
+    // 1. Draw solid background cement color
+    this.ctx.fillStyle = '#ececec';
     this.ctx.fillRect(0, 0, width, height);
 
-    // Helper to draw a smooth wavy area with horizontal translation + vertical parallax
-    const drawWaveLayer = (yBase, amp, freq, speed, phase, dir, colorStart, colorEnd, shadowAlpha) => {
+    // 2. Draw coordinates graph grid (reacting slightly to scroll)
+    this.ctx.strokeStyle = 'rgba(0, 0, 0, 0.04)';
+    this.ctx.lineWidth = 1.5;
+    
+    const gridSize = 24;
+    const gridOffsetY = -(this.scrollY * 0.1) % gridSize;
+    
+    this.ctx.beginPath();
+    for (let y = gridOffsetY; y < height; y += gridSize) {
+      this.ctx.moveTo(0, y);
+      this.ctx.lineTo(width, y);
+    }
+    for (let x = 0; x < width; x += gridSize) {
+      this.ctx.moveTo(x, 0);
+      this.ctx.lineTo(x, height);
+    }
+    this.ctx.stroke();
+
+    // 3. Draw floating brutalist shapes
+    this.shapes.forEach(shape => {
       this.ctx.save();
       
-      // Setup subtle edge shadow to make it look like silk folds
-      this.ctx.shadowColor = `rgba(0, 0, 0, ${shadowAlpha})`;
-      this.ctx.shadowBlur = 32;
-      this.ctx.shadowOffsetY = 6;
-
-      this.ctx.beginPath();
-      this.ctx.moveTo(0, height);
+      // Compute final drawing Y coord including scroll parallax shift
+      const finalY = shape.y - (this.scrollY * shape.parallaxFactor);
       
-      // Calculate vertical parallax shift on scroll
-      const verticalScrollShift = this.scrollY * 0.45 * freq;
-      
-      // Calculate horizontal translation on scroll (creates diagonal scrolling effect)
-      const horizontalScrollShift = this.scrollY * 0.35 * freq * dir;
+      // Only draw if visible on viewport
+      if (finalY > -shape.size * 2 && finalY < height + shape.size * 2) {
+        this.ctx.translate(shape.x, finalY);
+        this.ctx.rotate(shape.rotation);
 
-      // Start path at left boundary
-      const startTimeFactor = this.time * speed + phase;
-      const startXVal = (0 + horizontalScrollShift) * 0.003;
-      const startY = yBase + Math.sin(startTimeFactor + startXVal) * amp - verticalScrollShift;
-      this.ctx.lineTo(0, startY);
+        this.ctx.strokeStyle = 'rgba(0, 0, 0, 0.06)';
+        this.ctx.lineWidth = 1.5;
 
-      // Draw curve across width
-      const segments = 4;
-      const step = width / segments;
-      
-      for (let i = 1; i <= segments; i++) {
-        const x = i * step;
-        const prevX = (i - 1) * step;
-
-        const timeFactor = this.time * speed + phase;
-        
-        // Target points
-        const xVal = (x + horizontalScrollShift) * 0.003;
-        const y = yBase + Math.sin(timeFactor + xVal * freq) * amp - verticalScrollShift;
-
-        // Previous points
-        const prevXVal = (prevX + horizontalScrollShift) * 0.003;
-        const prevY = yBase + Math.sin(timeFactor + prevXVal * freq) * amp - verticalScrollShift;
-
-        // Control points for smooth bezier interpolation
-        const cp1x = prevX + step / 2;
-        const cp1y = prevY;
-        const cp2x = prevX + step / 2;
-        const cp2y = y;
-
-        this.ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
+        // Draw main shape outline (faint, no solid fills or drop shadows to ensure text readability)
+        this.drawShapePath(0, 0, shape.size, shape.type);
+        this.ctx.stroke();
       }
-
-      this.ctx.lineTo(width, height);
-      this.ctx.closePath();
-
-      // Create gradient fill matching M365 abstract art
-      const gradient = this.ctx.createLinearGradient(0, yBase - amp * 2, width, height);
-      gradient.addColorStop(0, colorStart);
-      gradient.addColorStop(1, colorEnd);
       
-      this.ctx.fillStyle = gradient;
-      this.ctx.fill();
       this.ctx.restore();
-    };
+    });
+  }
 
-    // 2. Render 4 overlapping white/gray waves (back to front)
-    // Wave 1 (Deep back layer - light lavender/gray tint, slow drift, sweeps right)
-    drawWaveLayer(
-      height * 0.30, 
-      75,   // Higher amplitude (was 45)
-      0.8,  // Frequency
-      0.5,  // Speed
-      0,    // Phase
-      1,    // Direction of horizontal scroll reaction (right)
-      'rgba(238, 238, 245, 0.94)', 
-      'rgba(255, 255, 255, 0.1)', 
-      0.03
-    );
-
-    // Wave 2 (Middle back layer - soft warm tint, sweeps left)
-    drawWaveLayer(
-      height * 0.48, 
-      90,   // Higher amplitude (was 60)
-      0.6,  // Frequency
-      0.4,  // Speed
-      Math.PI * 0.4, 
-      -1,   // Direction of horizontal scroll reaction (left)
-      'rgba(246, 240, 246, 0.95)', 
-      'rgba(255, 255, 255, 0.1)', 
-      0.04
-    );
-
-    // Wave 3 (Middle front layer - soft cyan/teal tint, sweeps right)
-    drawWaveLayer(
-      height * 0.62, 
-      85,   // Higher amplitude (was 50)
-      0.7,  // Frequency
-      0.6,  // Speed
-      Math.PI * 0.9, 
-      1.2,  // Faster horizontal scroll reaction
-      'rgba(240, 246, 245, 0.95)', 
-      'rgba(255, 255, 255, 0.1)', 
-      0.04
-    );
-
-    // Wave 4 (Front layer - pure clean white, sweeps left)
-    drawWaveLayer(
-      height * 0.78, 
-      65,   // Higher amplitude (was 35)
-      0.9,  // Frequency
-      0.7,  // Speed
-      Math.PI * 1.3, 
-      -1.2, // Faster horizontal scroll reaction
-      'rgba(255, 255, 255, 0.98)', 
-      'rgba(255, 255, 255, 0.2)', 
-      0.05
-    );
+  drawShapePath(x, y, size, type) {
+    this.ctx.beginPath();
+    
+    if (type === 'square') {
+      this.ctx.rect(x - size / 2, y - size / 2, size, size);
+    } else if (type === 'circle') {
+      this.ctx.arc(x, y, size / 2, 0, Math.PI * 2);
+    } else if (type === 'triangle') {
+      const h = size * (Math.sqrt(3) / 2);
+      this.ctx.moveTo(x, y - h / 2);
+      this.ctx.lineTo(x - size / 2, y + h / 2);
+      this.ctx.lineTo(x + size / 2, y + h / 2);
+      this.ctx.closePath();
+    } else if (type === 'cross') {
+      const thickness = size * 0.3;
+      this.ctx.rect(x - size / 2, y - thickness / 2, size, thickness);
+      this.ctx.rect(x - thickness / 2, y - size / 2, thickness, size);
+    }
   }
 
   animate() {

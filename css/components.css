@@ -5,31 +5,29 @@
 /* ── Card ── */
 .card {
   background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-xl);
+  border: 2px solid #000;
+  border-radius: var(--radius-lg);
   padding: var(--space-8);
-  transition: all var(--duration-normal) var(--ease-fluent);
+  transition: transform var(--duration-normal) var(--ease-spring), box-shadow var(--duration-normal) var(--ease-spring);
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-card);
 }
 
 .card:hover {
-  border-color: var(--border-hover);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card-hover);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000;
 }
 
 .card > * { position: relative; z-index: 1; }
 
 .card--glass {
-  background: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  border-color: var(--glass-border);
+  background: var(--bg-surface);
+  border: 2px solid #000;
+  border-radius: var(--radius-lg);
 }
 
-/* ── Button (Microsoft 365 style) ── */
+/* ── Button ── */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -37,9 +35,12 @@
   padding: var(--space-3) var(--space-6);
   font-family: var(--font-body);
   font-size: var(--text-sm);
-  font-weight: var(--weight-semibold);
-  border-radius: var(--radius-full);
-  transition: all var(--duration-normal) var(--ease-fluent);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid #000;
+  border-radius: var(--radius-md);
+  transition: all var(--duration-normal) var(--ease-spring);
   cursor: pointer;
   white-space: nowrap;
   text-decoration: none;
@@ -48,36 +49,42 @@
 .btn--primary {
   background: var(--color-primary);
   color: #ffffff;
+  box-shadow: 3px 3px 0px #000;
 }
 
 .btn--primary:hover {
-  background: var(--accent-mid);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  background: var(--color-secondary);
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px 0px #000;
   color: #ffffff;
   text-decoration: none;
 }
 
 .btn--outline {
   background: transparent;
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
+  border: 2px solid #000;
+  color: #000;
+  box-shadow: 3px 3px 0px #000;
 }
 
 .btn--outline:hover {
-  background: var(--color-primary);
-  color: #ffffff;
+  background: var(--color-yellow-chanh);
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px 0px #000;
+  color: #000;
   text-decoration: none;
 }
 
 .btn--ghost {
   background: transparent;
-  color: var(--text-secondary);
+  color: #000;
+  border-color: transparent;
 }
 
 .btn--ghost:hover {
-  color: var(--text-accent);
+  color: var(--color-secondary);
   background: var(--bg-hover);
+  border-color: #000;
   text-decoration: none;
 }
 
@@ -93,12 +100,13 @@
   gap: var(--space-1);
   padding: var(--space-1) var(--space-3);
   font-size: var(--text-xs);
-  font-weight: var(--weight-medium);
-  color: var(--text-accent);
-  background: rgba(37, 99, 235, 0.08);
-  border: 1px solid rgba(37, 99, 235, 0.15);
-  border-radius: var(--radius-full);
-  letter-spacing: 0.02em;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #000;
+  background: var(--color-yellow-chanh);
+  border: 2px solid #000;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.05em;
 }
 
 .tag--secondary {
@@ -192,15 +200,15 @@
 
 .modal {
   background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-2xl);
+  border: 2px solid #000;
+  border-radius: var(--radius-xl);
   max-width: 900px; width: 100%;
   max-height: 85vh;
   overflow-y: auto;
   padding: var(--space-8);
-  transform: translateY(20px) scale(0.97);
+  transform: translateY(20px);
   transition: transform var(--duration-slow) var(--ease-spring);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 6px 6px 0px #000;
 }
 
 .modal-overlay.active .modal { transform: translateY(0) scale(1); }
@@ -224,28 +232,30 @@
   position: fixed;
   bottom: var(--space-8);
   right: var(--space-8);
-  width: 44px; height: 44px;
+  width: 48px; height: 48px;
   display: flex; align-items: center; justify-content: center;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-default);
+  background: var(--color-secondary);
+  border: 2px solid #000;
   border-radius: var(--radius-full);
-  color: var(--text-secondary);
+  color: #fff;
   font-size: var(--text-lg);
+  font-weight: 900;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  transition: all var(--duration-normal) var(--ease-fluent);
+  transition: all var(--duration-normal) var(--ease-spring);
   z-index: var(--z-sticky);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
 
 .back-to-top:hover {
-  color: var(--color-primary);
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #000;
+  background: var(--color-yellow-chanh);
+  color: #000;
 }
 
 /* ── Project Table ── */

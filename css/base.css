@@ -15,7 +15,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 body {
@@ -24,7 +24,11 @@ body {
   font-weight: var(--weight-normal);
   line-height: var(--leading-normal);
   color: var(--text-primary);
-  background-color: transparent;
+  background-color: var(--bg-primary);
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -53,15 +57,18 @@ p {
 a {
   color: var(--text-accent);
   text-decoration: none;
-  transition: color var(--duration-fast) var(--ease-out);
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+  transition: all var(--duration-fast) var(--ease-out);
 }
 
 a:hover {
-  color: var(--color-primary);
-  text-decoration: underline;
+  color: var(--color-secondary);
+  border-bottom-color: var(--color-secondary);
+  text-decoration: none;
 }
 
-img { max-width: 100%; height: auto; display: block; }
+img { max-width: 100%; height: auto; display: block; border: 3px solid #000; }
 ul, ol { list-style: none; }
 
 button {
@@ -77,25 +84,24 @@ input, textarea, select { font-family: inherit; font-size: inherit; }
 
 /* ── Selection ── */
 ::selection {
-  background: rgba(37, 99, 235, 0.15);
-  color: var(--text-primary);
+  background: var(--color-secondary);
+  color: #ffffff;
 }
 
-/* ── Scrollbar (thin, light) ── */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--bg-secondary); }
+/* ── Scrollbar (Sleek Brutalist) ── */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { 
+  background: var(--bg-primary); 
+  border-left: 2px solid #000;
+}
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
+  background: var(--color-yellow-chanh);
+  border: 2px solid #000;
   border-radius: var(--radius-full);
-  border: 2px solid var(--bg-secondary);
 }
-::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.25); }
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.15) var(--bg-secondary);
+::-webkit-scrollbar-thumb:hover { 
+  background: var(--color-secondary); 
 }
-
 /* ── Utility Classes ── */
 .text-gradient {
   background: var(--accent-gradient);

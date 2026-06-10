@@ -267,6 +267,14 @@ export function renderSummaryPage() {
             </div>
           </a>
         </div>
+    <!-- Section VI: Lời kết -->
+    <section class="section gratitude-section" id="gratitude-section" style="text-align: center; padding: var(--space-8) 0;">
+      <div class="container container--narrow">
+        <div class="card gratitude-card reveal reveal--scale" style="border: 2px solid #000; box-shadow: 4px 4px 0px #000; padding: var(--space-8); background: #ffffff; border-radius: var(--radius-lg);">
+          <p style="font-size: var(--text-base); font-style: italic; line-height: var(--leading-relaxed); color: var(--text-heading); font-weight: 500; margin: 0;">
+            "Em xin gửi lời cảm ơn chân thành đến các Thầy/Cô bộ môn đã định hướng, và cảm ơn các bạn đã ghé thăm không gian số cá nhân của tôi!"
+          </p>
+        </div>
       </div>
     </section>
 

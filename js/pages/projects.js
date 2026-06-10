@@ -69,7 +69,7 @@ export async function renderProjectsPage() {
           </p>
           <div class="divider"></div>
         </div>
-        <div class="projects-grid stagger-children" id="projects-grid">
+        <div class="projects-bento-grid stagger-children" id="projects-grid">
           ${cards}
         </div>
       </div>
