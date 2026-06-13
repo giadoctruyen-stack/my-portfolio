@@ -114,7 +114,8 @@ export function renderProjectDetail(project) {
       switch (section.type) {
         case 'heading':
           const level = section.level || 2;
-          return `<h${level}>${section.content}</h${level}>`;
+          const id = generateSlug(section.content);
+          return `<h${level} id="${id}">${section.content}</h${level}>`;
         
         case 'text':
           return `<p>${section.content}</p>`;
@@ -181,52 +182,102 @@ export function renderProjectDetail(project) {
     `;
   }
 
+  // Generate Table of Contents if there are parsed sections and headings
+  let tocHtml = '';
+  if (project.sections && project.sections.length > 0) {
+    const headingSections = project.sections.filter(sec => sec.type === 'heading');
+    if (headingSections.length > 0) {
+      const tocItems = headingSections.map(sec => {
+        const level = sec.level || 2;
+        const id = generateSlug(sec.content);
+        const itemClass = level === 3 ? 'project-toc__item--h3' : 'project-toc__item--h2';
+        
+        if (level === 3) {
+          return `
+            <li class="project-toc__item ${itemClass}">
+              <span class="project-toc__text">${sec.content}</span>
+            </li>
+          `;
+        } else {
+          return `
+            <li class="project-toc__item ${itemClass}">
+              <a href="javascript:void(0)" class="project-toc__link toc-link" data-target="${id}">
+                ${sec.content}
+              </a>
+            </li>
+          `;
+        }
+      }).join('');
+
+      tocHtml = `
+        <div class="project-toc">
+          <div class="project-toc__title">
+            <span class="project-toc__title-icon">📋</span> Mục lục nội dung
+          </div>
+          <ul class="project-toc__list">
+            ${tocItems}
+          </ul>
+        </div>
+      `;
+    }
+  }
+
   return `
     <div class="project-detail">
       <button class="project-detail__back" id="project-back">
         ← Quay lại danh sách
       </button>
-      <div class="project-detail__header">
-        <div class="project-detail__meta">
-          <span class="tag">Bài tập ${project.id}</span>
-          ${tags}
-        </div>
-        <h1 class="project-detail__title">${project.title}</h1>
-        <p class="project-detail__description">${project.description}</p>
-        ${project.driveLink ? `
-        <a href="${project.driveLink}" target="_blank" rel="noopener noreferrer" 
-           class="btn btn--primary" style="margin-top: var(--space-6); display: inline-flex;">
-          📄 Xem sản phẩm đầy đủ (Google Drive)
-        </a>
-        ` : ''}
-      </div>
-      <div class="project-content">
-        ${contentHtml}
-      </div>
 
-      <!-- Embedded Document Viewer -->
-      ${pdfPath ? `
-        <div class="project-detail__pdf-section" style="margin-top: var(--space-12);">
-          <h3 style="font-size: var(--text-lg); font-weight: 900; margin-bottom: var(--space-4); text-transform: uppercase; border-bottom: 2px solid #000; padding-bottom: var(--space-2); display: inline-block;">
-            📄 Xem tài liệu chi tiết
-          </h3>
-          
-          ${isPdf ? `
-            <div class="pdf-container" style="border: 2px solid #000; border-radius: var(--radius-lg); overflow: hidden; background: #fff; box-shadow: 4px 4px 0px #000; height: 650px;">
-              <iframe src="${pdfPath}" width="100%" height="100%" style="border: none;"></iframe>
-            </div>
-          ` : `
-            <div class="pdf-container-placeholder" style="border: 2px solid #000; border-radius: var(--radius-lg); padding: var(--space-8); background: #fff; box-shadow: 4px 4px 0px #000; text-align: center;">
-              <p style="font-size: var(--text-base); color: var(--text-secondary); margin-bottom: var(--space-4);">
-                Tài liệu hiện tại ở định dạng Word (<strong>.docx</strong>). Hãy đổi tên hoặc xuất sang định dạng <strong>.pdf</strong> và liên kết để xem trực tiếp tại đây.
-              </p>
-              <a href="${pdfPath}" download class="btn btn--outline" style="display: inline-flex; justify-content: center;">
-                📥 Tải xuống tệp Word (.docx)
-              </a>
-            </div>
-          `}
+      <div class="project-detail__layout">
+        <div class="project-detail__header">
+          <div class="project-detail__meta">
+            <span class="tag">Bài tập ${project.id}</span>
+            ${tags}
+          </div>
+          <h1 class="project-detail__title">${project.title}</h1>
+          <p class="project-detail__description">${project.description}</p>
+          ${project.driveLink ? `
+          <a href="${project.driveLink}" target="_blank" rel="noopener noreferrer" 
+             class="btn btn--primary" style="margin-top: var(--space-6); display: inline-flex;">
+            📄 Xem sản phẩm đầy đủ (Google Drive)
+          </a>
+          ` : ''}
         </div>
-      ` : ''}
+
+        <div class="project-content-col">
+          <div class="project-content">
+            ${contentHtml}
+          </div>
+
+          <!-- Embedded Document Viewer -->
+          ${pdfPath ? `
+            <div class="project-detail__pdf-section" style="margin-top: var(--space-12);">
+              <h3 style="font-size: var(--text-lg); font-weight: 900; margin-bottom: var(--space-4); text-transform: uppercase; border-bottom: 2px solid #000; padding-bottom: var(--space-2); display: inline-block;">
+                📄 Xem tài liệu chi tiết
+              </h3>
+              
+              ${isPdf ? `
+                <div class="pdf-container" style="border: 2px solid #000; border-radius: var(--radius-lg); overflow: hidden; background: #fff; box-shadow: 4px 4px 0px #000; height: 650px;">
+                  <iframe src="${pdfPath}" width="100%" height="100%" style="border: none;"></iframe>
+                </div>
+              ` : `
+                <div class="pdf-container-placeholder" style="border: 2px solid #000; border-radius: var(--radius-lg); padding: var(--space-8); background: #fff; box-shadow: 4px 4px 0px #000; text-align: center;">
+                  <p style="font-size: var(--text-base); color: var(--text-secondary); margin-bottom: var(--space-4);">
+                    Tài liệu hiện tại ở định dạng Word (<strong>.docx</strong>). Hãy đổi tên hoặc xuất sang định dạng <strong>.pdf</strong> và liên kết để xem trực tiếp tại đây.
+                  </p>
+                  <a href="${pdfPath}" download class="btn btn--outline" style="display: inline-flex; justify-content: center;">
+                    📥 Tải xuống tệp Word (.docx)
+                  </a>
+                </div>
+              `}
+            </div>
+          ` : ''}
+        </div>
+
+        <aside class="project-sidebar-col">
+          ${tocHtml}
+        </aside>
+      </div>
     </div>
   `;
 }
@@ -235,4 +286,16 @@ function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
+}
+
+function generateSlug(text) {
+  return 'heading-' + text
+    .toString()
+    .toLowerCase()
+    .normalize('NFD') // Normalize to separate accents
+    .replace(/[\u0300-\u036f]/g, '') // Remove accents
+    .replace(/[đĐ]/g, 'd') // Replace Vietnamese character đ/Đ
+    .replace(/[^a-z0-9 -]/g, '') // Remove invalid chars
+    .replace(/\s+/g, '-') // Replace spaces with -
+    .replace(/-+/g, '-'); // Collapse dashes
 }

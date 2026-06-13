@@ -13,8 +13,8 @@
 // ============================================================
 const PERSONAL_INFO = {
   name: 'Đào Văn Hoàng Gia',
-  greeting: 'Xin chào, mình là',
-  subtitle: 'Sinh viên Công nghệ Thông tin hướng tới việc làm chủ các công nghệ cốt lõi và ứng dụng Trí tuệ nhân tạo vào thực tiễn.',
+  greeting: 'Xin chào, em là',
+  subtitle: 'Em hiện là sinh viên năm nhất ngành Công nghệ Thông tin tại Trường Đại học Công nghệ – Đại học Quốc gia Hà Nội. Em yêu thích tìm hiểu về Trí tuệ nhân tạo và các công nghệ mới, đồng thời luôn nỗ lực học hỏi để vận dụng kiến thức vào thực tiễn và phát triển bản thân.',
 
   // Thông tin cá nhân
   school: 'Trường Đại học Công nghệ - Đại học Quốc Gia Hà Nội',

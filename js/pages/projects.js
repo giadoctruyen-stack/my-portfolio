@@ -97,7 +97,7 @@ export async function renderProjectDetailPage(projectId) {
 
   return `
     <section class="section">
-      <div class="container container--narrow">
+      <div class="container">
         ${renderProjectDetail(project)}
       </div>
     </section>
@@ -134,6 +134,103 @@ export function initProjectDetailPage(pageElement) {
       window.location.hash = '/projects';
     });
   }
+
+  const tocLinks = pageElement.querySelectorAll('.toc-link');
+  const headings = Array.from(pageElement.querySelectorAll('.project-content h2'));
+
+  // Smooth scroll for Table of Contents links
+  tocLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('data-target');
+      const targetElement = pageElement.querySelector(`#${targetId}`);
+      if (targetElement) {
+        // Calculate the absolute position relative to the document at the moment of click
+        // This is 100% immune to image layout shifts and avoids the parent overflow:hidden scroll bug
+        const rect = targetElement.getBoundingClientRect();
+        const absoluteTop = rect.top + window.scrollY;
+        const headerOffset = 85; // navbar height (70px) + cushion (15px)
+        const offsetPosition = absoluteTop - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // ScrollSpy: Cache heading positions in memory to avoid layout thrashing on scroll
+  let headingTops = [];
+
+  const calculateHeadingPositions = () => {
+    headingTops = headings.map(heading => {
+      const rect = heading.getBoundingClientRect();
+      const absoluteTop = rect.top + window.scrollY;
+      return { id: heading.getAttribute('id'), top: absoluteTop };
+    });
+  };
+
+  // Run initial calculation after DOM is rendered
+  requestAnimationFrame(() => {
+    calculateHeadingPositions();
+    handleScroll();
+  });
+
+  // Backup calculation after a short delay to ensure any layout calculations/transitions have finished
+  setTimeout(() => {
+    calculateHeadingPositions();
+    handleScroll();
+  }, 400);
+
+  // Recalculate when window is resized (layout shifts)
+  window.addEventListener('resize', calculateHeadingPositions);
+
+  // Recalculate as images load asynchronously (prevents offset bugs)
+  pageElement.querySelectorAll('.project-content img').forEach(img => {
+    if (img.complete) {
+      calculateHeadingPositions();
+    } else {
+      img.addEventListener('load', calculateHeadingPositions);
+      img.addEventListener('error', calculateHeadingPositions);
+    }
+  });
+
+  // ScrollSpy: highlight active link on scroll
+  const handleScroll = () => {
+    // If page is navigated away (no longer in DOM), clean up the listeners
+    if (!document.body.contains(pageElement)) {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', calculateHeadingPositions);
+      return;
+    }
+
+    let activeId = null;
+    const scrollPosition = window.scrollY + 95; // Trigger slightly before heading reaches sticky top (75px)
+
+    for (const item of headingTops) {
+      if (item.top <= scrollPosition) {
+        activeId = item.id;
+      } else {
+        break;
+      }
+    }
+
+    tocLinks.forEach(link => {
+      const parentLi = link.closest('.project-toc__item');
+      if (link.getAttribute('data-target') === activeId) {
+        link.classList.add('project-toc__link--active');
+        if (parentLi) parentLi.classList.add('project-toc__item--active');
+      } else {
+        link.classList.remove('project-toc__link--active');
+        if (parentLi) parentLi.classList.remove('project-toc__item--active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  // Run once to initialize active states
+  handleScroll();
 }
 
 /**
