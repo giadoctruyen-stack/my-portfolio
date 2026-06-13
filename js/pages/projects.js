@@ -32,6 +32,22 @@ async function loadProjects() {
   }
 
   projectsCache = projects;
+
+  // Pre-load images in background to avoid layout shifts on project pages
+  projects.forEach(project => {
+    if (project.sections) {
+      project.sections.forEach(sec => {
+        if (sec.type === 'image' && sec.src) {
+          const imgSrc = sec.src.startsWith('http') 
+            ? sec.src 
+            : `projects/bai-tap-${project.id}/${sec.src}`;
+          const img = new Image();
+          img.src = imgSrc;
+        }
+      });
+    }
+  });
+
   return projects;
 }
 
@@ -177,11 +193,13 @@ export function initProjectDetailPage(pageElement) {
     handleScroll();
   });
 
-  // Backup calculation after a short delay to ensure any layout calculations/transitions have finished
-  setTimeout(() => {
-    calculateHeadingPositions();
-    handleScroll();
-  }, 400);
+  // Recalculate when the slide-up/fade transition of the page finishes to avoid translateY offsets
+  pageElement.addEventListener('transitionend', (e) => {
+    if (e.target === pageElement) {
+      calculateHeadingPositions();
+      handleScroll();
+    }
+  });
 
   // Recalculate when window is resized (layout shifts)
   window.addEventListener('resize', calculateHeadingPositions);
@@ -189,10 +207,18 @@ export function initProjectDetailPage(pageElement) {
   // Recalculate as images load asynchronously (prevents offset bugs)
   pageElement.querySelectorAll('.project-content img').forEach(img => {
     if (img.complete) {
+      img.classList.add('loaded');
       calculateHeadingPositions();
     } else {
-      img.addEventListener('load', calculateHeadingPositions);
-      img.addEventListener('error', calculateHeadingPositions);
+      img.addEventListener('load', () => {
+        img.classList.add('loaded');
+        calculateHeadingPositions();
+        handleScroll();
+      });
+      img.addEventListener('error', () => {
+        img.classList.add('loaded');
+        calculateHeadingPositions();
+      });
     }
   });
 

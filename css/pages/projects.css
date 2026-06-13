@@ -304,6 +304,15 @@
   border: 1px solid var(--border-subtle);
   margin: var(--space-6) 0;
   box-shadow: var(--shadow-sm);
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.project-content img:not(.loaded) {
+  min-height: 300px;
+  background-color: var(--bg-hover);
 }
 
 .project-content .image-caption {

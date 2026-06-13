@@ -132,7 +132,7 @@ export function renderProjectDetail(project) {
           const caption = section.caption 
             ? `<p class="image-caption">${section.caption}</p>` 
             : '';
-          return `<img src="${imgSrc}" alt="${section.caption || ''}" loading="lazy">${caption}`;
+          return `<img src="${imgSrc}" alt="${section.caption || ''}" loading="eager">${caption}`;
         
         case 'code':
           return `<pre><code>${escapeHtml(section.content)}</code></pre>`;
